@@ -1,0 +1,125 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins', sans-serif;
+     scroll-behavior: smooth;
+}
+
+body{
+     background: linear-gradient(#2b1055, #7597de);
+     min-height: 100vh;
+     overflow-x: hidden;
+}
+header{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 30px 100px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     z-index: 10000;
+}
+.logo{
+     color: #fff;
+     font-weight: 700;
+     text-decoration: none;
+     font-size: 2em;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+}
+header ul{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 2.675rem;
+}
+header ul li{
+     list-style: none;
+}
+header ul li a{
+     text-decoration: none;
+     padding: 6px 15px;
+     color: #fff;
+     border-radius: 20px;
+     transition: background 0.5s linear;
+}
+header ul li a:hover,
+.active{
+     background-color: #fff;
+     color: #2b1055;
+}
+section{
+     position: relative;
+     width: 100%;
+     height: 100vh;
+     padding: 100px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+}
+section::before{
+     content: '';
+     width: 100%;
+     height: 100px;
+     z-index: 10000;
+     background: linear-gradient(to top, #2b1055, transparent);
+     position: absolute;
+     bottom: 0;
+}
+section img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     pointer-events: none;
+}
+section img#moon{
+     mix-blend-mode: screen;
+}
+section img#mountains_front{
+     z-index: 10;
+}
+#moon_light{
+     position: absolute;
+     right: -350px;
+     color: #fff;
+     font-size: 7.5vw;
+     z-index: 9;
+     white-space: nowrap;
+}
+#button{
+     text-decoration: none;
+     display: inline-block;
+     padding: 8px 30px;
+     border-radius: 40px;
+     background: #fff;
+     color: #2b1055;
+     z-index: 9;
+     font-size: 1.5em;
+     cursor: pointer;
+     transform: translateY(100px);
+}
+.middle{
+     position: relative;
+     padding: 100px;
+     background: #2b1055;
+     color: #fff;
+}
+.middle h1{
+     font-size: 4em;
+     font-weight: 700;
+     letter-spacing: 2px;
+     text-align: center;
+}
+.middle p{
+     font-size: 0.876rem;
+     text-align: justify;
+     margin: 30px;
+     line-height: 2;
+}
