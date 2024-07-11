@@ -3,11 +3,13 @@
      padding: 0;
      box-sizing: border-box;
      font-family: 'Poppins', sans-serif;
+     scroll-behavior: smooth;
 }
 
 body{
      background: linear-gradient(#2b1055, #7597de);
      min-height: 100vh;
+     overflow-x: hidden;
 }
 header{
      position: absolute;
@@ -49,15 +51,17 @@ header ul li a:hover,
      background-color: #fff;
      color: #2b1055;
 }
-.main{
+section{
+     position: relative;
      width: 100%;
      height: 100vh;
      padding: 100px;
      display: flex;
      align-items: center;
      justify-content: center;
+     overflow: hidden;
 }
-.main::before{
+section::before{
      content: '';
      width: 100%;
      height: 100px;
@@ -66,7 +70,7 @@ header ul li a:hover,
      position: absolute;
      bottom: 0;
 }
-.main img{
+section img{
      position: absolute;
      top: 0;
      left: 0;
@@ -75,18 +79,19 @@ header ul li a:hover,
      object-fit: cover;
      pointer-events: none;
 }
-.main img #moon{
+section img#moon{
      mix-blend-mode: screen;
 }
-#moon-light{
+section img#mountains_front{
+     z-index: 10;
+}
+#moon_light{
      position: absolute;
+     right: -350px;
      color: #fff;
      font-size: 7.5vw;
      z-index: 9;
      white-space: nowrap;
-}
-#mountains_front{
-     z-index: 10;
 }
 #button{
      text-decoration: none;
