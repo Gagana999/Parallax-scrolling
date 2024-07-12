@@ -5,6 +5,7 @@ let moon_light = document.getElementById('moon_light');
 let button = document.getElementById('button');
 let mountains_front = document.getElementById('mountains_front');
 let header = document.querySelector('header');
+let menu = document.getElementById('menu');
 
 window.addEventListener('scroll', function(){
      let value = window.scrollY;
@@ -17,3 +18,8 @@ window.addEventListener('scroll', function(){
      button.style.marginTop = value * 1.5 + 'px';
      header.style.top = value * 0.5 + 'px';
 })
+
+
+menu.addEventListener('click', function(){
+     header.classList.toggle('show');
+});
